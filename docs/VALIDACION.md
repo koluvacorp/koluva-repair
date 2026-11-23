@@ -1,5 +1,11 @@
 # Validación de Koluva Repair 1.0.0
 
+## Versión 1.0.1
+
+- Pruebas de origen IPC y persistencia: 4/4 aprobadas; el IPC acepta una variación de mayúsculas de la misma ruta local en Windows y rechaza otros archivos, URL remotas, query strings, fragmentos y texto inválido.
+- Suite completa: 35/35 pruebas aprobadas.
+- La ventana no se abrió durante las pruebas; la confirmación visual e instalación/actualización final queda para la prueba manual del propietario.
+
 ## Comprobaciones automatizadas
 
 - `npm test`: 33 pruebas aprobadas, incluidas geometría del isotipo, pedidos, historial, planes/licencias, Google PKCE y OAuth compartido, copias y manifiesto.

@@ -1,5 +1,10 @@
 # Cambios
 
+## 1.0.1 — Corrección de inicio en Windows
+
+- Corrige la validación del origen local de Electron para admitir diferencias de mayúsculas en rutas de Windows y exigir que la llamada provenga del frame principal de la app.
+- Si el inicio encuentra otro problema, muestra una opción accesible para volver a intentarlo sin borrar los datos locales.
+
 ## 1.0.0 — Lanzamiento completo para Windows
 
 - Gestión local de órdenes desde recepción hasta entrega: cliente temporal, datos del equipo, estado, prioridad, diagnóstico, accesorios y fecha estimada.

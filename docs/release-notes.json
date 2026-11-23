@@ -1,4 +1,10 @@
 {
+  "1.0.1": {
+    "es": "Corrige el inicio de la app en algunas instalaciones de Windows al normalizar la ruta local de forma segura. Si aparece otro problema, ahora podés reintentar sin borrar tus datos.",
+    "en": "Fixes app startup on some Windows installations by safely normalizing the local path. If another issue occurs, you can now retry without deleting your data.",
+    "pt": "Corrige a inicialização em algumas instalações do Windows ao normalizar o caminho local com segurança. Se outro problema ocorrer, agora é possível tentar novamente sem apagar os dados.",
+    "fr": "Corrige le démarrage sur certaines installations Windows en normalisant le chemin local de manière sûre. En cas d’autre problème, vous pouvez réessayer sans supprimer vos données."
+  },
   "1.0.0": {
     "es": "Versión completa para Windows: órdenes, historial por fecha, rectificaciones, presupuestos, inventario, tipos de equipo personalizados, adjuntos, fichas imprimibles y copias locales o cifradas. Cuenta Koluva con correo o Google para activar licencias pagas; los datos del taller siguen en la PC. Planes Gratis, Pro y Pro Plus con licencias firmadas, control desde Admin y uso sin conexión. Instalador y actualizaciones verificadas.",
     "en": "Complete Windows release: work orders, dated history, corrections, estimates, inventory, custom device types, attachments, printable work sheets, and local or encrypted backups. Sign in to a Koluva account by email or Google to activate paid licenses; workshop data stays on the PC. Free, Pro and Pro Plus plans use signed licenses managed through Admin, with offline support. Includes installer and verified updates.",

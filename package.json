@@ -1,7 +1,7 @@
 {
   "name": "koluva-repair",
   "productName": "Koluva Repair",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Gestión local de órdenes para talleres de reparación.",
   "author": "Koluva",
   "license": "SEE LICENSE IN LICENSE",
