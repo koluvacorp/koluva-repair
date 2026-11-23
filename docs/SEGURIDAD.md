@@ -24,10 +24,10 @@ La firma del manifiesto no es una firma Authenticode de Windows. SmartScreen pue
 
 ## Configuración del servicio de licencias
 
-1. Aplicar `migrations/0011_repair_subscriptions.sql` a la D1 existente `koluva-site`; no crear otra base ni borrar tablas.
-2. Guardar en el secreto del Worker `koluva-corp` el contenido de `D:\KoluvaVault\06 Seguridad\Koluva Repair\signing\repair-license-private.pem` bajo el nombre `REPAIR_LICENSE_SIGNING_KEY`.
-3. Configurar `REPAIR_RENEWAL_EMAIL` como secreto con el correo público de contacto de Koluva. No configurar ni publicar un WhatsApp personal sin una decisión expresa.
-4. Desplegar el Worker API del repo `koluvacorp/koluvacorp` manualmente. El contenido del sitio se despliega siguiendo su workflow existente.
+1. **Configurado 2026-11-23:** migración aditiva `0011_repair_subscriptions.sql` aplicada a la D1 existente `koluva-site`; no se creó otra base ni se tocaron tablas de otros productos.
+2. **Configurado 2026-11-23:** secreto `REPAIR_LICENSE_SIGNING_KEY` creado en el Worker `koluva-corp` desde la clave local del vault; nunca se incluye en el repo.
+3. **Configurado 2026-11-23:** secreto `REPAIR_RENEWAL_EMAIL` presente en `koluva-corp`; no se publica WhatsApp personal.
+4. **Desplegado 2026-11-23:** Worker API `koluva-corp` (versión `0774b2e6-d1bd-452b-8f33-ebfeabb5a702`); el cambio del Admin se publicó con Workers Builds del repo web y su check final quedó verde.
 5. Abrir Admin → Suscripciones Repair, crear una licencia mensual, entregar el código al cliente por un canal privado y no copiarlo en la página pública.
 6. Probar activación, renovación, suspensión, restablecimiento de dispositivo y vencimiento con datos de prueba antes de ofrecer planes al público.
 
@@ -38,3 +38,4 @@ La migración es aditiva y usa tablas propias de Repair. La base y las tablas de
 ## Alcance
 
 Se ejecutan pruebas automatizadas de modelo, licencias, API, traducciones y manifiestos, auditoría de dependencias de producción y compilación. Esto no es una auditoría profesional de penetración ni una garantía de ausencia de vulnerabilidades o puertas traseras. Las operaciones remotas se limitan al canal firmado de actualizaciones y, por consentimiento, la API de licencias. Revisá cambios de dependencias y artefactos antes de publicar futuras versiones.
+
