@@ -1,0 +1,14 @@
+.account-social{display:grid;margin:0 0 10px}
+.account-links{display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+.google-button{display:flex;width:100%;min-height:44px;align-items:center;justify-content:center;gap:10px;background:#fff;color:#202124;border:1px solid #dadce0;font-weight:600}
+.google-button:hover{background:#f8f9fa;border-color:#c6c9ce;transform:translateY(-1px)}
+.google-button:active{transform:scale(.99)}
+.google-button img{flex:none}
+.password-row{display:grid;grid-template-columns:minmax(0,1fr) 38px;align-items:center}
+.password-row .input{grid-column:1/-1;grid-row:1}
+.password-toggle{z-index:1;grid-column:2;grid-row:1;margin-right:4px}
+.password-toggle svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.account-social .google-button:focus-visible,.link-button:focus-visible,.password-toggle:focus-visible{outline:3px solid color-mix(in srgb,var(--red) 52%,transparent);outline-offset:3px}
+.link-button{padding:0;border:0;background:transparent;color:var(--red);font:inherit;text-decoration:underline;text-underline-offset:2px}
+.link-button:focus-visible{outline:3px solid color-mix(in srgb,var(--red) 52%,transparent);outline-offset:3px;border-radius:3px}
+@media(prefers-reduced-motion:reduce){.google-button{transition:none!important}}

@@ -1,0 +1,56 @@
+{
+  "name": "koluva-repair",
+  "productName": "Koluva Repair",
+  "version": "1.0.0",
+  "description": "Gestión local de órdenes para talleres de reparación.",
+  "author": "Koluva",
+  "license": "SEE LICENSE IN LICENSE",
+  "private": true,
+  "main": "electron/main.cjs",
+  "scripts": {
+    "start": "node tools/sync-www.cjs && electron .",
+    "sync": "node tools/sync-www.cjs",
+    "test": "node --test test/*.test.cjs test/*.test.mjs",
+    "dist:win": "node tools/sync-www.cjs && electron-builder --win nsis --x64",
+    "release:keygen": "node tools/gen-keys.cjs",
+    "release:manifest": "node tools/create-update-manifest.cjs",
+    "release:publish": "node tools/publish.cjs",
+    "postinstall": "node node_modules/electron/install.js"
+  },
+  "engines": { "node": ">=24.0.0" },
+  "devDependencies": {
+    "electron": "45.3.4",
+    "electron-builder": "26.18.0",
+    "fontkit": "3.0.0",
+    "sharp": "0.35.5"
+  },
+  "build": {
+    "appId": "com.koluva.repair",
+    "productName": "Koluva Repair",
+    "artifactName": "KoluvaRepair-${version}-Windows-${arch}-Setup.${ext}",
+    "directories": { "output": "release", "buildResources": "www/assets" },
+    "files": ["electron/**/*", "www/**/*", "release.config.json", "package.json"],
+    "asar": true,
+    "electronFuses": {
+      "runAsNode": false,
+      "enableNodeOptionsEnvironmentVariable": false,
+      "enableNodeCliInspectArguments": false,
+      "enableEmbeddedAsarIntegrityValidation": true,
+      "onlyLoadAppFromAsar": true
+    },
+    "win": { "target": "nsis", "icon": "www/assets/app-icon.ico", "executableName": "KoluvaRepair" },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowElevation": false,
+      "packElevateHelper": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Koluva Repair",
+      "deleteAppDataOnUninstall": false,
+      "installerLanguages": ["es", "en", "fr", "pt_BR"],
+      "language": "3082"
+    }
+  }
+}

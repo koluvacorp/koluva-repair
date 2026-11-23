@@ -1,0 +1,5 @@
+'use strict';
+const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm');
+const source=fs.readFileSync(require.resolve('../www/js/i18n.js'),'utf8'),box={window:{}};vm.runInNewContext(source,box);const tables=box.window.RepairI18n.T;
+test('all supported locales contain the same non-empty translation keys',()=>{const langs=['es','en','pt','fr'],base=Object.keys(tables.es).sort();for(const lang of langs){assert.deepEqual(Object.keys(tables[lang]).sort(),base,`Translation keys differ in ${lang}`);for(const [key,value] of Object.entries(tables[lang]))assert.equal(typeof value,'string',`${lang}.${key}`);}});
+test('translation source has no duplicated keys in locale blocks',()=>{for(const lang of ['es','en','pt','fr']){const start=source.indexOf(`${lang}:{`)+lang.length+2,next={es:'en',en:'pt',pt:'fr',fr:null}[lang],end=next?source.indexOf(`${next}:{`,start):source.indexOf('\n};',start),block=source.slice(start,end),keys=[...block.matchAll(/(?:^|,)\s*([A-Za-z][\w]*):/g)].map(m=>m[1]);assert.equal(new Set(keys).size,keys.length,`Duplicate keys in ${lang}`);}});
