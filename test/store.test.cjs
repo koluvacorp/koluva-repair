@@ -6,6 +6,7 @@ const vm = require('node:vm');
 
 function createStore(fileText) {
   const calls = [];
+  const statuses = [];
   let stateText = '';
   const data = {
     schema: 1,
@@ -38,8 +39,15 @@ function createStore(fileText) {
     openFile: async () => { calls.push('open'); return { name: 'backup.krepair', text: fileText }; },
   };
   vm.runInNewContext(fs.readFileSync(require.resolve('../www/js/store.js'), 'utf8'), context);
-  return { store: context.window.RepairStore, calls, read: () => stateText };
+  return { store: context.window.RepairStore, calls, statuses, read: () => stateText };
 }
+
+test('onStatus is a callback property used to report store changes', () => {
+  const { store, statuses } = createStore('');
+  store.onStatus = status => statuses.push(status);
+  store.state = { schema: 1 };
+  assert.deepEqual(statuses, ['pending']);
+});
 
 test('portable backup import flushes current edits before opening and replacing state', async () => {
   const backup = { format: 'koluva-repair-backup', version: 1, data: { schema: 1, shop: {}, settings: {}, orders: [], parts: [] }, files: [] };

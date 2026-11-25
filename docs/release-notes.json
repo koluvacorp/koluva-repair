@@ -1,4 +1,10 @@
 {
+  "1.0.3": {
+    "es": "Corrige el error que impedía iniciar la app: el callback del estado de guardado se registraba como función, pero el almacén lo define como propiedad. Tus datos locales no necesitan cambios.",
+    "en": "Fixes the startup error: the save-status callback was registered as a function, but the store defines it as a property. Your local data needs no changes.",
+    "pt": "Corrige o erro que impedia a inicialização: o callback do estado de salvamento era registrado como função, mas o armazenamento o define como propriedade. Seus dados locais não precisam de alterações.",
+    "fr": "Corrige l’erreur qui empêchait le démarrage : le rappel d’état d’enregistrement était appelé comme une fonction, alors que le stockage le définit comme une propriété. Aucune modification de vos données locales n’est nécessaire."
+  },
   "1.0.2": {
     "es": "Mejora el inicio de Repair en Electron al conservar la comprobación segura de la ventana y la ruta local, sin depender de metadatos de frame inestables. Si aparece otro error, muestra un detalle técnico solo en esta PC para poder corregirlo.",
     "en": "Improves Repair startup in Electron by keeping secure window and local-path checks without relying on unstable frame metadata. If another error occurs, it shows technical details on this PC only to help diagnose it.",

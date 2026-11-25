@@ -1,5 +1,10 @@
 # Validación de Koluva Repair 1.0.0
 
+## Versión 1.0.3
+
+- Corregido el error exacto de la captura (`S.onStatus is not a function`) mediante la asignación del callback a la propiedad existente.
+- Prueba del callback de estado incluida en `npm test`.
+
 ## Versión 1.0.2
 
 - El IPC mantiene el control del WebContents principal y la ruta exacta del documento local; se eliminó la condición de jerarquía de frame que podía impedir el acceso al iniciar.

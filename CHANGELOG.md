@@ -1,5 +1,10 @@
 # Cambios
 
+## 1.0.3 — Inicio de la interfaz
+
+- Corrige el registro del estado de guardado, que detenía el arranque de la aplicación después de cargar los datos locales.
+- Agrega una prueba que comprueba la interfaz correcta del callback del almacén.
+
 ## 1.0.2 — Compatibilidad IPC de Electron
 
 - Evita depender de metadatos de jerarquía de frames que pueden variar según el momento de inicio de Electron. Se conserva la validación del WebContents y la ruta exacta del archivo local de Repair.

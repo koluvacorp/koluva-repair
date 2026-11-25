@@ -10,7 +10,7 @@
   await L.opening();
   if(r.fresh||!S.state.shop.name)L.showSetup();else if(!S.state.settings.tourDone)L.showTour(0);
   L.scheduleUpdateChecks();
-  S.onStatus(status=>{const el=document.getElementById('save');if(el)el.textContent=status==='saving'?'…':status==='saved'?L.t('saved'):status==='error'?L.t('saveError'):'';});
+  S.onStatus=status=>{const el=document.getElementById('save');if(el)el.textContent=status==='saving'?'…':status==='saved'?L.t('saved'):status==='error'?L.t('saveError'):'';};
  }catch(err){
   console.error('Koluva Repair startup failed',err);
   document.body.replaceChildren();
