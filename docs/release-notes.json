@@ -1,4 +1,10 @@
 {
+  "1.0.4": {
+    "es": "Recupera la apertura de marca de Koluva con la tuerca blanca de Repair y el patrón corporativo. Suma transiciones breves al navegar, cambiar pestañas y ajustar el tema; respeta el control de movimiento y movimiento reducido.",
+    "en": "Restores Koluva's branded opening with Repair's white nut and the corporate pattern. Adds brief transitions for navigation, tab changes and theme selection, while respecting the motion setting and reduced-motion preference.",
+    "pt": "Restaura a abertura de marca da Koluva com a porca branca do Repair e o padrão corporativo. Adiciona transições breves ao navegar, trocar de abas e mudar o tema, respeitando o ajuste de movimento e a preferência por movimento reduzido.",
+    "fr": "Rétablit l’ouverture de marque Koluva avec l’écrou blanc de Repair et le motif corporatif. Ajoute de brèves transitions à la navigation, au changement d’onglet et de thème, tout en respectant le réglage de mouvement et la préférence de réduction des animations."
+  },
   "1.0.3": {
     "es": "Corrige el error que impedía iniciar la app: el callback del estado de guardado se registraba como función, pero el almacén lo define como propiedad. Tus datos locales no necesitan cambios.",
     "en": "Fixes the startup error: the save-status callback was registered as a function, but the store defines it as a property. Your local data needs no changes.",

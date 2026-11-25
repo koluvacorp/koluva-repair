@@ -1,5 +1,12 @@
 # Cambios
 
+## 1.0.4 — Apertura y movimiento Koluva
+
+- Restaura la apertura de Koluva con el patrón corporativo compartido y el isotipo blanco de tuerca de Repair.
+- Añade entrada escalonada al navegar, respuesta en pestañas y controles, y un reveal breve al cambiar el tema.
+- Los efectos se limitan a opacidad y transformaciones; respetan el ajuste de movimiento de Repair y `prefers-reduced-motion`.
+- Añade cobertura automática para navegación, apertura y cambio de tema.
+
 ## 1.0.3 — Inicio de la interfaz
 
 - Corrige el registro del estado de guardado, que detenía el arranque de la aplicación después de cargar los datos locales.

@@ -19,3 +19,31 @@ dialog{margin:auto;padding:0;border:1px solid var(--line);border-radius:18px;bac
 :root[data-motion=off] *, :root[data-motion=off] *:before, :root[data-motion=off] *:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}:root[data-motion=off] .nav-item{--dock:1!important}
 @media(prefers-reduced-motion:reduce){:root[data-motion=system] *, :root[data-motion=system] *:before, :root[data-motion=system] *:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}:root[data-motion=system] .nav-item{--dock:1!important}}
  .custom-paper{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:12px}.custom-paper[hidden]{display:none!important}
+
+/* Koluva motion: brief, navigation-led, and compositor-friendly. */
+.page{animation:none}
+main.enter .page>*{animation:repair-reveal .4s var(--ease) both}
+main.enter .page>*:nth-child(2){animation-delay:.05s}
+main.enter .page>*:nth-child(3){animation-delay:.1s}
+main.enter .page>*:nth-child(4){animation-delay:.15s}
+main.enter .page>*:nth-child(5){animation-delay:.2s}
+main.enter .page>*:nth-child(n+6){animation-delay:.25s}
+@keyframes repair-reveal{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+.btn{transition:transform .48s var(--ease),background-color .18s var(--ease),border-color .18s var(--ease),color .18s var(--ease),box-shadow .18s var(--ease)}
+@media(hover:hover) and (pointer:fine){.btn:not(:disabled):hover{transform:perspective(900px) rotateX(3deg) rotateY(-3deg) translateY(-2px) translateZ(3px)}}
+.btn:active{transform:perspective(900px) rotateX(1deg) rotateY(-1deg) scale(.98);transition-duration:.12s}
+.btn.primary:hover{box-shadow:none}
+.card{transition:transform .2s var(--ease),border-color .2s var(--ease)}
+.nav-item{transition:transform .18s var(--ease),background-color .18s var(--ease),color .18s var(--ease)}
+.nav-item svg{transition:transform .18s var(--ease)}
+@media(hover:hover) and (pointer:fine){.nav-item:hover{transform:scale(var(--dock,1)) translateY(-1px)}.nav-item:hover svg{transform:scale(1.08)}}
+.nav-item:active{transform:scale(.97)}
+.settings-nav button,.seg button,.theme-switch button{transition:transform .18s var(--ease),background-color .18s var(--ease),color .18s var(--ease),box-shadow .18s var(--ease)}
+.settings-nav button:active,.seg button:active,.theme-switch button:active{transform:scale(.97)}
+
+:root.theme-reveal::after{content:"";position:fixed;inset:0;z-index:2147482998;pointer-events:none;background:var(--theme-cover);opacity:1}
+:root.theme-reveal.theme-reveal-active::after{animation:theme-reveal .32s var(--ease) forwards}
+@keyframes theme-reveal{from{opacity:1}to{opacity:0}}
+:root[data-motion=off] .btn:hover,:root[data-motion=off] .btn:active,:root[data-motion=off] .nav-item:hover,:root[data-motion=off] .nav-item:active,:root[data-motion=off] .card:hover,:root[data-motion=off] .theme-switch button:hover,:root[data-motion=off] .theme-switch button:active,:root[data-motion=off] .settings-nav button:active,:root[data-motion=off] .seg button:active,:root[data-motion=off] .website:hover{transform:none!important}
+@media(prefers-reduced-motion:reduce){:root[data-motion=system] .btn:hover,:root[data-motion=system] .btn:active,:root[data-motion=system] .nav-item:hover,:root[data-motion=system] .nav-item:active,:root[data-motion=system] .card:hover,:root[data-motion=system] .theme-switch button:hover,:root[data-motion=system] .theme-switch button:active,:root[data-motion=system] .settings-nav button:active,:root[data-motion=system] .seg button:active,:root[data-motion=system] .website:hover{transform:none!important}}
