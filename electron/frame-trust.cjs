@@ -21,4 +21,9 @@ function isTrustedAppFrame(frameUrl, appUrl, platform = process.platform) {
   }
 }
 
-module.exports = { isTrustedAppFrame };
+function isTrustedAppRequest(event, webContents, appUrl, platform = process.platform) {
+  return !!event && !!webContents && event.sender === webContents
+    && isTrustedAppFrame(event.senderFrame?.url, appUrl, platform);
+}
+
+module.exports = { isTrustedAppFrame, isTrustedAppRequest };

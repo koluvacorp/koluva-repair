@@ -1,5 +1,10 @@
 # Validación de Koluva Repair 1.0.0
 
+## Versión 1.0.2
+
+- El IPC mantiene el control del WebContents principal y la ruta exacta del documento local; se eliminó la condición de jerarquía de frame que podía impedir el acceso al iniciar.
+- La pantalla de error conserva el mensaje técnico local para distinguir fallos de IPC, permisos y lectura. No hay telemetría ni envío de diagnóstico.
+
 ## Versión 1.0.1
 
 - Pruebas de origen IPC y persistencia: 4/4 aprobadas; el IPC acepta una variación de mayúsculas de la misma ruta local en Windows y rechaza otros archivos, URL remotas, query strings, fragmentos y texto inválido.

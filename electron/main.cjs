@@ -4,7 +4,7 @@ const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypt
 const update=require('./update.cjs'),rel=require('../release.config.json'),pkg=require('../package.json');
 const license=require('./license.cjs');
 const oauth=require('./oauth.cjs');
-const {isTrustedAppFrame}=require('./frame-trust.cjs');
+const {isTrustedAppRequest}=require('./frame-trust.cjs');
 const jwk=JSON.parse(fs.readFileSync(path.join(__dirname,'../www/assets/update-public.json'),'utf8'));
 const MAX_STATE=80*1024*1024,MAX_IMPORT=60*1024*1024,MAX_ATTACHMENT=12*1024*1024;
 let win=null,pendingInstaller=null,verifiedManifest=null,isQuitting=false,closeRequested=false,repairLicense=null,repairLicenseReady=false,licenseExpiryTimer=null;
@@ -15,7 +15,7 @@ const dataDir=()=>app.getPath('userData');
 const dataPath=()=>path.join(dataDir(),'repair-data.json');
 const attachmentDir=()=>path.join(dataDir(),'attachments');
 const APP_URL=pathToFileURL(path.join(__dirname,'../www/index.html')).href;
-function trusted(e){return !!win&&e.sender===win.webContents&&e.senderFrame?.parent===null&&isTrustedAppFrame(e.senderFrame?.url,APP_URL);}
+function trusted(e){return !!win&&isTrustedAppRequest(e,win.webContents,APP_URL);}
 function assertTrusted(e){if(!trusted(e))throw Error('Origen IPC no autorizado.');}
 function readSafe(file,limit=MAX_STATE){try{const st=fs.statSync(file);if(!st.isFile()||st.size>limit)return null;return fs.readFileSync(file,'utf8');}catch{return null;}}
 function validStateText(text){if(typeof text!=='string'||Buffer.byteLength(text,'utf8')>MAX_STATE)throw Error('El archivo supera el tamaño permitido.');let obj;try{obj=JSON.parse(text)}catch{throw Error('Los datos no tienen formato JSON válido.')}if(!obj||typeof obj!=='object'||Array.isArray(obj)||obj.schema!==1||!Array.isArray(obj.orders)||!Array.isArray(obj.parts)||!obj.shop||typeof obj.shop!=='object'||!obj.settings||typeof obj.settings!=='object')throw Error('La estructura de datos no es compatible.');}

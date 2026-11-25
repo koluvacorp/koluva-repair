@@ -1,4 +1,10 @@
 {
+  "1.0.2": {
+    "es": "Mejora el inicio de Repair en Electron al conservar la comprobación segura de la ventana y la ruta local, sin depender de metadatos de frame inestables. Si aparece otro error, muestra un detalle técnico solo en esta PC para poder corregirlo.",
+    "en": "Improves Repair startup in Electron by keeping secure window and local-path checks without relying on unstable frame metadata. If another error occurs, it shows technical details on this PC only to help diagnose it.",
+    "pt": "Melhora a inicialização do Repair no Electron mantendo verificações seguras da janela e do caminho local, sem depender de metadados instáveis do frame. Se ocorrer outro erro, mostra detalhes técnicos somente neste PC para ajudar no diagnóstico.",
+    "fr": "Améliore le démarrage de Repair dans Electron en conservant les vérifications de la fenêtre et du chemin local sans dépendre de métadonnées de frame instables. En cas d’autre erreur, affiche des détails techniques uniquement sur ce PC pour faciliter le diagnostic."
+  },
   "1.0.1": {
     "es": "Corrige el inicio de la app en algunas instalaciones de Windows al normalizar la ruta local de forma segura. Si aparece otro problema, ahora podés reintentar sin borrar tus datos.",
     "en": "Fixes app startup on some Windows installations by safely normalizing the local path. If another issue occurs, you can now retry without deleting your data.",

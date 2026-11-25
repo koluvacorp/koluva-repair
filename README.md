@@ -2,6 +2,10 @@
 
 Koluva Repair is a Windows desktop app for repair shops. It manages temporary customer details, work orders, dated progress, corrections, estimates, parts, evidence and printable intake/work sheets for phones, computers, consoles and other repairable equipment.
 
+## Version 1.0.2
+
+- Improves startup IPC compatibility and shows the local error detail on the recovery screen. Diagnostics stay on the device.
+
 ## Version 1.0.1
 
 - Fixes secure local IPC path validation on Windows and adds a safe startup retry screen. Local records are not deleted by a startup failure.

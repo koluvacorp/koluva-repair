@@ -1,5 +1,10 @@
 # Cambios
 
+## 1.0.2 — Compatibilidad IPC de Electron
+
+- Evita depender de metadatos de jerarquía de frames que pueden variar según el momento de inicio de Electron. Se conserva la validación del WebContents y la ruta exacta del archivo local de Repair.
+- La pantalla de recuperación muestra el error técnico local para identificar fallos de permisos o lectura, sin enviarlo a ningún servidor.
+
 ## 1.0.1 — Corrección de inicio en Windows
 
 - Corrige la validación del origen local de Electron para admitir diferencias de mayúsculas en rutas de Windows y exigir que la llamada provenga del frame principal de la app.
