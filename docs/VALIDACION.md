@@ -5,6 +5,8 @@
 - La preferencia global inicia activada en instalaciones nuevas; el sanitizador conserva `off` y `system` cuando forman parte de datos guardados.
 - La apertura se ejecuta si está habilitada. Movimiento reducido del sistema aplica un fundido corto; el modo `off` la omite y apaga los efectos visuales.
 - Suite automatizada: 43/43 aprobadas. No se abrió la app ni se usó la pantalla; la aceptación visual y la actualización en la PC del propietario quedan pendientes.
+- Publicada el 25-11-2026: [instalador directo 1.0.6](https://github.com/koluvacorp/koluva-repair/releases/download/repair-v1.0.6/KoluvaRepair-1.0.6-Windows-x64-Setup.exe). El manifiesto ECDSA valida versión, URL, tamaño y SHA-256; instalador y canal estable respondieron HTTP 200.
+- Retención verificada: releases versionadas 1.0.1 a 1.0.6; se retiró 1.0.0 después de verificar los seis instaladores conservados.
 
 ## Versión 1.0.3
 
