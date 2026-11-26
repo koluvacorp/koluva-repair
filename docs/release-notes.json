@@ -1,4 +1,10 @@
 {
+  "1.0.5": {
+    "es": "Hace más expresivo el movimiento de Repair: la navegación y las tarjetas entran por etapas, las cifras y barras se animan, las pestañas marcan la selección y los botones responden a la posición del puntero con una inclinación leve. El cambio de tema y los diálogos tienen transiciones más cuidadas. Se respeta el ajuste de movimiento y movimiento reducido.",
+    "en": "Makes Repair's motion more expressive: navigation and cards reveal in stages, metrics and bars animate, tabs mark the selection, and buttons respond to pointer position with a subtle tilt. Theme changes and dialogs get more polished transitions. The motion setting and reduced-motion preference are respected.",
+    "pt": "Deixa o movimento do Repair mais expressivo: navegação e cartões aparecem em etapas, números e barras são animados, as abas destacam a seleção e os botões respondem à posição do ponteiro com uma inclinação sutil. A troca de tema e os diálogos ganham transições mais cuidadas. O ajuste de movimento e a preferência por movimento reduzido são respeitados.",
+    "fr": "Le mouvement de Repair devient plus expressif : navigation et cartes apparaissent par étapes, chiffres et barres s’animent, les onglets indiquent la sélection et les boutons réagissent à la position du pointeur par une légère inclinaison. Les changements de thème et les dialogues gagnent des transitions plus soignées. Le réglage de mouvement et la préférence de réduction des animations sont respectés."
+  },
   "1.0.4": {
     "es": "Recupera la apertura de marca de Koluva con la tuerca blanca de Repair y el patrón corporativo. Suma transiciones breves al navegar, cambiar pestañas y ajustar el tema; respeta el control de movimiento y movimiento reducido.",
     "en": "Restores Koluva's branded opening with Repair's white nut and the corporate pattern. Adds brief transitions for navigation, tab changes and theme selection, while respecting the motion setting and reduced-motion preference.",

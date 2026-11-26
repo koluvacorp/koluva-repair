@@ -1,5 +1,13 @@
 # Cambios
 
+## 1.0.5 — Movimiento más expresivo
+
+- Reinterpreta patrones de movimiento de cinco referencias: navegación con selección fluida, tarjetas y contenido por etapas, cifras y barras animadas.
+- Añade inclinación 3D sutil ligada al puntero en botones y tarjetas; se limita a una superficie bajo el cursor y se limpia al salir.
+- Mejora las entradas de diálogos, avisos y los cambios de tema.
+- Completa el gráfico de distribución por estado con barras animadas en el resumen.
+- Respeta el ajuste de movimiento y `prefers-reduced-motion`; no agrega dependencias ni cambia el diseño o contenido de las referencias.
+
 ## 1.0.4 — Apertura y movimiento Koluva
 
 - Restaura la apertura de Koluva con el patrón corporativo compartido y el isotipo blanco de tuerca de Repair.
