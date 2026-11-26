@@ -5,7 +5,10 @@
 - La causa identificada: valores `system` guardados por instalaciones anteriores eran en realidad el valor predeterminado y, con reducción de movimiento en Windows, desactivaban todas las animaciones.
 - La migración cambia ese valor heredado a `on`; mantiene `off` explícito y preserva `system` solo después de que el usuario lo elija en Ajustes.
 - La prueba de preferencias cubre valor inicial, migración heredada, elección explícita `system` y `off`.
-- Pendiente tras publicar: confirmación visual por el propietario, sin usar su pantalla durante esta tarea.
+- Publicada el 26-11-2026: [instalador directo 1.0.7](https://github.com/koluvacorp/koluva-repair/releases/download/repair-v1.0.7/KoluvaRepair-1.0.7-Windows-x64-Setup.exe). Release y canal estable HTTP 200; manifiesto ECDSA, tamaño y SHA-256 verificados por la herramienta de publicación.
+- `npm test`: 43/43. NSIS x64 compilado. Se cotejaron dentro de `app.asar` la apertura, arranque, preferencias, estilos y configuración contra el código fuente.
+- La revisión fue estática/automatizada. No se abrió la app ni se usó la pantalla; queda pendiente la confirmación visual del propietario.
+- Retención: releases versionadas 1.0.2–1.0.7; se retiró 1.0.1 después de verificar HTTP 200 en los seis instaladores conservados.
 
 ## Versión 1.0.6
 
