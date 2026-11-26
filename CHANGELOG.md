@@ -1,5 +1,12 @@
 # Cambios
 
+## 1.0.6 — Apertura visible y control de movimiento
+
+- La apertura de Repair aparece al iniciar con animación completa; si Windows pide reducir movimiento, usa un fundido breve accesible.
+- Las instalaciones nuevas comienzan con el movimiento activado. Desactivarlo detiene la apertura, navegación, hover, tema y demás efectos; la preferencia existente se conserva al actualizar.
+- Corrige el nombre del módulo de apertura para que coincida con Koluva.
+- Sin dependencias nuevas ni cambios en los datos locales.
+
 ## 1.0.5 — Movimiento más expresivo
 
 - Reinterpreta patrones de movimiento de cinco referencias: navegación con selección fluida, tarjetas y contenido por etapas, cifras y barras animadas.

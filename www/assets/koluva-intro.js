@@ -1,4 +1,4 @@
-/* Koluva · apertura compartida. KolivaIntro.play({iso, pattern, color, duration, skippable}) -> Promise */
+/* Koluva · apertura compartida. KoluvaIntro.play({iso, pattern, color, duration, skippable}) -> Promise */
 (function (g) {
   'use strict';
   function gates(o) {
@@ -12,18 +12,26 @@
     const len = Math.hypot(w, h), cov = line.map(([x, y]) => [Math.max(0, x - h / len * 4), Math.max(0, y - w / len * 4)]);
     o.querySelector('.k-gate-b').style.clipPath = poly([[0, h], ...cov, [w, 0], [w, h]]);
   }
-  g.KolivaIntro = {
+  g.KoluvaIntro = {
     play(opt) {
       return new Promise(resolve => {
         const o = document.createElement('div'); o.className = 'k-intro'; o.setAttribute('aria-hidden', 'true');
+        if (opt.reducedMotion) o.classList.add('k-intro-reduced');
         o.style.setProperty("--k-pattern", `url("${new URL(opt.pattern, document.baseURI).href}")`); if (opt.color) o.style.setProperty('--k-bg', opt.color);
         const dur = opt.duration || 2000; o.style.setProperty('--k-dur', dur + 'ms');
         o.innerHTML = '<div class="k-gate k-gate-a"></div><div class="k-gate k-gate-b"></div><div class="k-logo"><img class="k-full" alt="" src="' + opt.iso + '"><span class="k-piece k-piece-a"><img alt="" src="' + opt.iso + '"></span><span class="k-piece k-piece-b"><img alt="" src="' + opt.iso + '"></span></div>';
         document.body.append(o); document.body.classList.add('k-intro-playing'); gates(o);
-        let done = false;
-        const end = () => { if (done) return; done = true; document.removeEventListener('keydown', key, true); o.remove(); document.body.classList.remove('k-intro-playing'); resolve(); };
+        let done = false, fade;
+        const end = () => { if (done) return; done = true; document.removeEventListener('keydown', key, true); fade?.cancel(); o.remove(); document.body.classList.remove('k-intro-playing'); resolve(); };
         const key = e => { if (['Escape', 'Enter', ' '].includes(e.key)) { e.preventDefault(); end(); } };
         if (opt.skippable !== false) { o.addEventListener('click', end); document.addEventListener('keydown', key, true); }
+        if (opt.reducedMotion && typeof o.animate === 'function') {
+          requestAnimationFrame(() => {
+            if (done) return;
+            fade = o.animate([{ opacity: 1 }, { opacity: 0 }], { duration: dur, easing: 'ease-out', fill: 'forwards' });
+            fade.finished.then(end, () => {});
+          });
+        }
         setTimeout(end, dur + 80);
       });
     },

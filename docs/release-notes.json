@@ -1,4 +1,10 @@
 {
+  "1.0.6": {
+    "es": "Hace visible la apertura de Repair al iniciar y agrega un fundido breve cuando Windows tiene activada la reducción de movimiento. Las instalaciones nuevas comienzan con las animaciones activadas; al desactivarlas se apagan también la apertura, navegación, hover y cambio de tema. Conserva la preferencia existente al actualizar.",
+    "en": "Makes Repair's opening visible at startup and uses a brief fade when Windows reduced motion is enabled. New installations start with animations on; turning them off also disables the opening, navigation, hover and theme effects. Existing preferences are preserved during updates.",
+    "pt": "Deixa a abertura do Repair visível ao iniciar e usa um fade breve quando a redução de movimento do Windows está ativada. Novas instalações começam com as animações ligadas; ao desativá-las, a abertura, navegação, hover e efeitos de tema também são desligados. A preferência existente é mantida na atualização.",
+    "fr": "Rend l’ouverture de Repair visible au démarrage et utilise un fondu bref lorsque la réduction des animations de Windows est activée. Les nouvelles installations démarrent avec les animations actives ; les désactiver coupe aussi l’ouverture, la navigation, le survol et les effets de thème. Le choix existant est conservé lors d’une mise à jour."
+  },
   "1.0.5": {
     "es": "Hace más expresivo el movimiento de Repair: la navegación y las tarjetas entran por etapas, las cifras y barras se animan, las pestañas marcan la selección y los botones responden a la posición del puntero con una inclinación leve. El cambio de tema y los diálogos tienen transiciones más cuidadas. Se respeta el ajuste de movimiento y movimiento reducido.",
     "en": "Makes Repair's motion more expressive: navigation and cards reveal in stages, metrics and bars animate, tabs mark the selection, and buttons respond to pointer position with a subtle tilt. Theme changes and dialogs get more polished transitions. The motion setting and reduced-motion preference are respected.",

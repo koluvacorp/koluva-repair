@@ -1,5 +1,11 @@
 # Validación de Koluva Repair 1.0.0
 
+## Versión 1.0.6
+
+- La preferencia global inicia activada en instalaciones nuevas; el sanitizador conserva `off` y `system` cuando forman parte de datos guardados.
+- La apertura se ejecuta si está habilitada. Movimiento reducido del sistema aplica un fundido corto; el modo `off` la omite y apaga los efectos visuales.
+- Suite automatizada: 43/43 aprobadas. No se abrió la app ni se usó la pantalla; la aceptación visual y la actualización en la PC del propietario quedan pendientes.
+
 ## Versión 1.0.3
 
 - Corregido el error exacto de la captura (`S.onStatus is not a function`) mediante la asignación del callback a la propiedad existente.

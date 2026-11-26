@@ -1,1 +1,1 @@
-window.REPAIR_CFG={"version":"1.0.5","repo":"koluvacorp/koluva-repair"};
+window.REPAIR_CFG={"version":"1.0.6","repo":"koluvacorp/koluva-repair"};

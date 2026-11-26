@@ -16,4 +16,9 @@ body.k-intro-playing{overflow:hidden}
 @keyframes k-gate-a{0%,34%{transform:translate(0,0)}100%{transform:translate(-58vw,-54vh)}}
 @keyframes k-gate-b{0%,34%{transform:translate(0,0)}100%{transform:translate(58vw,54vh)}}
 @keyframes k-drift{to{background-position:var(--k-step) calc(0px - var(--k-step))}}
+.k-intro-reduced{cursor:default}
+.k-intro-reduced .k-gate,.k-intro-reduced .k-gate:after,.k-intro-reduced .k-full,.k-intro-reduced .k-piece{animation:none!important}
+.k-intro-reduced .k-gate-a,.k-intro-reduced .k-gate-b{transform:none}
+.k-intro-reduced .k-full{opacity:1;transform:none}
+.k-intro-reduced .k-piece{transform:none}
 @media(max-width:600px){.k-logo{width:min(58vw,200px)}.k-intro{--k-step:180px}}
