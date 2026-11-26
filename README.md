@@ -2,11 +2,11 @@
 
 Koluva Repair is a Windows desktop app for repair shops. It manages temporary customer details, work orders, dated progress, corrections, estimates, parts, evidence and printable intake/work sheets for phones, computers, consoles and other repairable equipment.
 
-## Version 1.0.6
+## Version 1.0.7
 
-- Keeps the branded opening visible on startup; Windows reduced-motion mode uses a brief fade.
-- New installations start with motion enabled. Turning it off disables the opening and all interface effects; saved preferences survive updates.
-- [Download the Windows x64 installer](https://github.com/koluvacorp/koluva-repair/releases/download/repair-v1.0.6/KoluvaRepair-1.0.6-Windows-x64-Setup.exe).
+- Migrates the old default motion preference to enabled, fixing silent animations after updates; explicit Off and new Follow Windows choices are preserved.
+- Opening, navigation, hover and theme motion play when enabled.
+- [Download the Windows x64 installer](https://github.com/koluvacorp/koluva-repair/releases/download/repair-v1.0.7/KoluvaRepair-1.0.7-Windows-x64-Setup.exe).
 
 ## Version 1.0.2
 

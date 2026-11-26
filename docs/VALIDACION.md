@@ -1,5 +1,12 @@
 # Validación de Koluva Repair 1.0.0
 
+## Versión 1.0.7
+
+- La causa identificada: valores `system` guardados por instalaciones anteriores eran en realidad el valor predeterminado y, con reducción de movimiento en Windows, desactivaban todas las animaciones.
+- La migración cambia ese valor heredado a `on`; mantiene `off` explícito y preserva `system` solo después de que el usuario lo elija en Ajustes.
+- La prueba de preferencias cubre valor inicial, migración heredada, elección explícita `system` y `off`.
+- Pendiente tras publicar: confirmación visual por el propietario, sin usar su pantalla durante esta tarea.
+
 ## Versión 1.0.6
 
 - La preferencia global inicia activada en instalaciones nuevas; el sanitizador conserva `off` y `system` cuando forman parte de datos guardados.

@@ -1,4 +1,10 @@
 {
+  "1.0.7": {
+    "es": "Corrige las preferencias heredadas que podían dejar Repair sin ninguna animación: el antiguo valor `system` era el predeterminado y Windows podía reducir todos los efectos. Ahora se migra a Activado; se conserva Desactivado y las nuevas elecciones de Seguir Windows siguen respetando accesibilidad. Incluye la apertura y las animaciones de la interfaz.",
+    "en": "Fixes inherited preferences that could leave Repair without any animations: the old default was `system`, and Windows could reduce every effect. It now migrates to On; Off is preserved, and new Follow Windows choices continue to respect accessibility. This covers the opening and interface animations.",
+    "pt": "Corrige preferências antigas que podiam deixar o Repair sem animações: o valor padrão anterior era `system`, e o Windows podia reduzir todos os efeitos. Agora ele é migrado para Ativado; Desativado é preservado, e novas escolhas de Seguir o Windows continuam respeitando a acessibilidade. Inclui a abertura e as animações da interface.",
+    "fr": "Corrige les anciennes préférences qui pouvaient supprimer toutes les animations de Repair : l’ancienne valeur par défaut était `system`, et Windows pouvait réduire tous les effets. Elle migre maintenant vers Activé ; Désactivé est conservé et les nouveaux choix Suivre Windows respectent toujours l’accessibilité. Cela inclut l’ouverture et les animations de l’interface."
+  },
   "1.0.6": {
     "es": "Hace visible la apertura de Repair al iniciar y agrega un fundido breve cuando Windows tiene activada la reducción de movimiento. Las instalaciones nuevas comienzan con las animaciones activadas; al desactivarlas se apagan también la apertura, navegación, hover y cambio de tema. Conserva la preferencia existente al actualizar.",
     "en": "Makes Repair's opening visible at startup and uses a brief fade when Windows reduced motion is enabled. New installations start with animations on; turning them off also disables the opening, navigation, hover and theme effects. Existing preferences are preserved during updates.",

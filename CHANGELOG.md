@@ -1,5 +1,11 @@
 # Cambios
 
+## 1.0.7 — Corrige preferencias de movimiento heredadas
+
+- Corrige la causa del silencio en instalaciones actualizadas: el valor `system` antiguo era el predeterminado y podía suprimir toda la animación cuando Windows reducía el movimiento.
+- Migra ese valor heredado a Activado; conserva `off` y guarda elecciones nuevas de Seguir Windows para respetar la accesibilidad.
+- La intro, navegación, hover y cambios de tema vuelven a animarse cuando están activados.
+
 ## 1.0.6 — Apertura visible y control de movimiento
 
 - La apertura de Repair aparece al iniciar con animación completa; si Windows pide reducir movimiento, usa un fundido breve accesible.
